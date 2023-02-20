@@ -12,8 +12,9 @@ main {
   flex: 1 calc(100vh - 110px);
   display: flex;
   flex-direction: column;
-  align-items:flex-start;
+  align-items: center;
   justify-content: space-around;
+  background-image: url("https://pyxis.nymag.com/v1/imgs/006/d9b/4e57795e74a43f8b710abe70e39f6479d7-07-simon-cowell-american-idol.2x.h473.w710.jpg");
 }
 
 footer {
@@ -79,14 +80,14 @@ footer a {
 .button-top-left {
   border-radius: 100% 0 0 0;
   margin: 20px 0 0 20px;
-  background-color: green;
+  background-color: rgb(236, 90, 255);
   border: thick solid rgb(36, 53, 0);
 }
 
 .button-top-right {
   border-radius: 0 100% 0 0;
   margin: 20px 20px 0 0;
-  background-color: red;
+  background-color: rgb(68, 247, 74);
   border: thick solid rgb(83, 12, 12);
 }
 
@@ -100,7 +101,7 @@ footer a {
 .button-bottom-right {
   border-radius: 0 0 100% 0;
   margin: 0 20px 20px 0;
-  background-color: blue;
+  background-color: rgb(82, 82, 238);
   border: thick solid rgb(27, 14, 100);
 }
 
@@ -156,9 +157,14 @@ footer a {
   }
 }
 
-.demo-box {
-  margin: 1rem 0;
-  border: thin solid #070707;
-  border-radius: 0.25rem;
-  padding: 1rem;
+#register-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.box-background {
+  padding: 30px;
+  border-radius: 20px;
+  background-color: rgb(47, 47, 47);
 }

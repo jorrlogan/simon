@@ -38,12 +38,14 @@
       </nav>
     </header>
 
-    <main class="container-fluid bg-secondary text-center">
+    <main class="container-fluid text-center">
       <div>
-        <h1>Welcome</h1>
-        <p>Login to play</p>
-        <form method="get" action="play.html">
+        <form id="register-form" class="box-background" method="get" action="play.html">
+            <h1>Welcome</h1>
+            <p>Login to prove to Simon if you've got the <br>skills to be a contender on his next show</p>
           <input type="text" id="name" placeholder="Your name here" />
+          <input type="text" id="gender" placeholder="Gender"/>
+          <input type="number" id="age" placeholder="Age"/>
           <button type="submit" class="btn btn-primary">Login</button>
         </form>
       </div>
