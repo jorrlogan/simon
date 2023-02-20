@@ -12,7 +12,7 @@ main {
   flex: 1 calc(100vh - 110px);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-around;
   background-image: url("https://pyxis.nymag.com/v1/imgs/006/d9b/4e57795e74a43f8b710abe70e39f6479d7-07-simon-cowell-american-idol.2x.h473.w710.jpg");
 }
