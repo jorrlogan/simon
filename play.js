@@ -4,7 +4,7 @@ const btnDescriptions = [
     { file: 'sound3.mp3', hue: 60 },
     { file: 'sound4.mp3', hue: 240 },
   ];
-
+  
   class Button {
     constructor(description, el) {
       this.el = el;
@@ -33,7 +33,7 @@ const btnDescriptions = [
       });
     }
   }
-
+  
   class Game {
     buttons;
     allowPlayer;
@@ -162,17 +162,18 @@ const btnDescriptions = [
       return scores;
     }
   }
-
-const game = new Game();
-
-function delay(milliseconds) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(true);
-    }, milliseconds);
-  });
-}
-
-function loadSound(filename) {
-  return new Audio('assets/' + filename);
-}
+  
+  const game = new Game();
+  
+  function delay(milliseconds) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(true);
+      }, milliseconds);
+    });
+  }
+  
+  function loadSound(filename) {
+    return new Audio('assets/' + filename);
+  }
+  
