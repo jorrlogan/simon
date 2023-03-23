@@ -125,26 +125,42 @@ const btnDescriptions = [
       let buttons = Array.from(this.buttons.values());
       return buttons[Math.floor(Math.random() * this.buttons.size)];
     }
-  
-    saveScore(score) {
+
+    async saveScore(score){
       const userName = this.getPlayerName();
+      const date = new Date().toLocaleDateString();
+      const gender = localStorage.getItem('userGender')
+      const age = localStorage.getItem('userAge')
+      const newScore = { name: userName, score: score, date: date, gender: gender, age: age }
+      console.log(newScore)
+      try {
+        const response = await fetch('/api/score', {
+          method: 'POST',
+          headers: {'content-type': 'application/json'},
+          body: JSON.stringify(newScore)
+        })
+
+        const scores = await response.json()
+        localStorage.setItem('scores', JSON.stringify(scores))
+        console.log("success")
+      } catch {
+        // If there was an error then just track scores locally
+        this.updateScoresLocal(newScore)
+        console.log("failed")
+      }
+    }
+  
+  
+    updateScoresLocal(newScore) {
       let scores = [];
       const scoresText = localStorage.getItem('scores');
       if (scoresText) {
         scores = JSON.parse(scoresText);
       }
-      scores = this.updateScores(userName, score, scores);
-  
-      localStorage.setItem('scores', JSON.stringify(scores));
-    }
-  
-    updateScores(userName, score, scores) {
-      const date = new Date().toLocaleDateString();
-      const newScore = { name: userName, score: score, date: date };
   
       let found = false;
       for (const [i, prevScore] of scores.entries()) {
-        if (score > prevScore.score) {
+        if (newScore > prevScore.score) {
           scores.splice(i, 0, newScore);
           found = true;
           break;
@@ -159,7 +175,7 @@ const btnDescriptions = [
         scores.length = 10;
       }
   
-      return scores;
+      localStorage.setItem('scores', JSON.stringify(scores));
     }
   }
   
