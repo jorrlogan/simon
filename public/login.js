@@ -27,6 +27,7 @@
 
 
 async function loginUser() {
+  console.log("hello world")
     loginOrCreate(`/api/auth/login`);
   }
   
