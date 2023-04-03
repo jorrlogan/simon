@@ -44,7 +44,7 @@ class Game {
   sequence;
   playerPlaybackPos;
   mistakeSound;
-  socket;
+  socket; 
 
   constructor() {
     this.buttons = new Map();
