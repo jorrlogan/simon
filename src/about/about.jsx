@@ -37,8 +37,8 @@ export function About(props) {
   }
 
   return (
-    <main className='container-fluid bg-secondary text-center'>
-      <div>
+    <main className='container-fluid bg-white text-center'>
+      <div className='text-black'>
         <div id='picture' className='picture-box'>
           {imgEl}
         </div>
@@ -53,7 +53,7 @@ export function About(props) {
           educational use only. No part of this code or application may be used outside of that definition.
         </p>
 
-        <div className='quote-box bg-light text-dark'>
+        <div className='quote-box m-8 text-dark'>
           <p className='quote'>{quote}</p>
           <p className='author'>{quoteAuthor}</p>
         </div>

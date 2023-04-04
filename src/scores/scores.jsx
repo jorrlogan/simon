@@ -44,8 +44,8 @@ export function Scores() {
   }
 
   return (
-    <main className='container-fluid bg-secondary text-center'>
-      <table className='table table-warning table-striped-columns'>
+    <main className='container-fluid bg-white text-center'>
+      <table className='table table-striped'>
         <thead className='table-dark'>
           <tr>
             <th>#</th>

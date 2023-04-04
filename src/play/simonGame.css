@@ -30,28 +30,28 @@
 .button-top-left {
   border-radius: 100% 0 0 0;
   margin: 20px 0 0 20px;
-  background-color: green;
+  background-color: rgb(91, 249, 91);
   border: thick solid rgb(36, 53, 0);
 }
 
 .button-top-right {
   border-radius: 0 100% 0 0;
   margin: 20px 20px 0 0;
-  background-color: red;
+  background-color: rgb(255, 136, 231);
   border: thick solid rgb(83, 12, 12);
 }
 
 .button-bottom-left {
   border-radius: 0 0 0 100%;
   margin: 0 0 20px 20px;
-  background-color: yellow;
+  background-color: rgb(255, 255, 130);
   border: thick solid rgb(94, 90, 10);
 }
 
 .button-bottom-right {
   border-radius: 0 0 100% 0;
   margin: 0 20px 20px 0;
-  background-color: blue;
+  background-color: rgb(130, 130, 250);
   border: thick solid rgb(27, 14, 100);
 }
 
